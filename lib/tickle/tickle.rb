@@ -37,7 +37,7 @@ module Tickle
     #
     def parse(text, specified_options = {})
       # get options and set defaults if necessary.  Ability to set now is mostly for debugging
-      default_options = {:start => Time.now, :next_only => false, :until => nil, :now => Time.now}
+      default_options = {:start => Time.now, :next_only => false, :until => nil, :now => Time.now, :allow_past_occurrances => false}
       options = default_options.merge specified_options
 
       # ensure an expression was provided
